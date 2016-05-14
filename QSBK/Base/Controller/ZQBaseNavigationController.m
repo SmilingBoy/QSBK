@@ -14,9 +14,18 @@
 
 @implementation ZQBaseNavigationController
 
++ (void)initialize
+{
+    UINavigationBar *bar = [UINavigationBar appearance];
+    
+    UIImage *image = [[UIImage imageNamed:@"evaluate_bg.9"] stretchableImageWithLeftCapWidth:10 topCapHeight:0];
+    
+    [bar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 

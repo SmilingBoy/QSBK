@@ -19,3 +19,8 @@ typedef void(^BlockType)(NSInteger);
 - (void)setSelectedIndex:(BlockType)selectedIndex;
 
 @end
+
+
+@interface ZQButton : UIButton
+
+@end
