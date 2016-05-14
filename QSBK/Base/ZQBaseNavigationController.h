@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZQBaseNavigationController.h
 //  QSBK
 //
 //  Created by lx on 16/5/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZQBaseNavigationController : UINavigationController
 
 @end
-

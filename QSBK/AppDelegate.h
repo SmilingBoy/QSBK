@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  QSBK
 //
-//  Created by lx on 16/5/14.
+//  Created by lx on 16/5/13.
 //  Copyright © 2016年 LiZhiqiang. All rights reserved.
 //
 
