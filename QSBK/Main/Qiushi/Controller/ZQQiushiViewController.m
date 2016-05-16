@@ -16,7 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+//    [self setUpRightBarButtons];
+    
 }
+
+- (void)setUpRightBarButtons{
+    
+    UIImage *image = [UIImage imageNamed:@"ic_add_article"];
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(image.size.width/2.0, image.size.height/2.0), NO, 0);
+    [image drawInRect:CGRectMake(0, 0, image.size.width/2.0, image.size.height/2.0)];
+    image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleDone target:self action:nil];
+    self.navigationItem.rightBarButtonItem = rightBarButton1;
+    
+}
+
 
 @end

@@ -14,6 +14,7 @@
 #import "ZQMeViewController.h"
 #import "ZQBaseNavigationController.h"
 #import "ZQBaseTabBar.h"
+#import "UIViewExt.h"
 
 @interface ZQBaseTabBarController ()
 
@@ -111,12 +112,31 @@
  */
 - (void)addOneViewController:(UIViewController *)vc withNorImage:(UIImage *)norImg withSelImg:(UIImage *)selImg withTitle:(NSString *)title{
     
-    vc.title = title;
+    //自定义navigationItem左侧按钮样式
+    UIView *leftButtonView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
+    
+    UIImageView *leftButtonImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"ic_ab_qiushi"]];
+    leftButtonImage.frame = CGRectMake(0, 0, 40, 40);
+    [leftButtonView addSubview:leftButtonImage];
+    
+    UILabel *leftButtonLebel = [[UILabel alloc]initWithFrame:CGRectMake(leftButtonImage.width, 0, 40, 40)];
+    leftButtonLebel.text = title;
+    leftButtonLebel.textColor = [UIColor whiteColor];
+    leftButtonLebel.font = [UIFont boldSystemFontOfSize:20];
+    [leftButtonLebel sizeToFit];
+    leftButtonLebel.centerY = leftButtonImage.centerY;
+    [leftButtonView addSubview:leftButtonLebel];
+    
+    UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithCustomView:leftButtonView];
+    
+    //设置子视图
+    vc.tabBarItem.title = title;
     vc.tabBarItem.image = [norImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     vc.tabBarItem.selectedImage = [selImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.navigationItem.leftBarButtonItem = leftButton;
     
+    //设置NavigationController
     ZQBaseNavigationController *nvc = [[ZQBaseNavigationController alloc]initWithRootViewController:vc];
-    
     [self addChildViewController:nvc];
     
     [self.items addObject:vc.tabBarItem];

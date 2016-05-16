@@ -50,6 +50,10 @@
 
 - (void)buttonClick:(UIButton *)sender{
     
+    if (sender ==  _selectedButton) {
+        return;
+    }
+    
     sender.selected = YES;
     
     _selectedButton.selected = NO;

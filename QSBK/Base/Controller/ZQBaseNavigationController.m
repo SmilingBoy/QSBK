@@ -21,12 +21,16 @@
     UIImage *image = [[UIImage imageNamed:@"evaluate_bg.9"] stretchableImageWithLeftCapWidth:10 topCapHeight:0];
     
     [bar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+//    [bar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20],NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
+
+
 
 
 @end
