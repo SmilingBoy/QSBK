@@ -7,6 +7,7 @@
 //
 
 #import "ZQBaseTabBarController.h"
+
 #import "ZQQiushiViewController.h"
 #import "ZQQiuyouCircleViewController.h"
 #import "ZQDIscoverViewController.h"
@@ -14,7 +15,6 @@
 #import "ZQMeViewController.h"
 #import "ZQBaseNavigationController.h"
 #import "ZQBaseTabBar.h"
-#import "UIViewExt.h"
 
 @interface ZQBaseTabBarController ()
 

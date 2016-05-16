@@ -17,20 +17,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self setUpRightBarButtons];
+    [self setUpRightBarButtons]; 
+    
+    [self setUpTableView];
+}
+
+/**
+ *  设置右侧按钮
+ */
+- (void)setUpRightBarButtons{
+    
+    UIImage *image1 = [UIImage imageNamed:@"ic_add_article"];
+    image1 = [[image1 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:nil];
+    
+    UIImage *image2 = [UIImage imageNamed:@"ic_audit"];
+    image2 = [[image2 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:nil];
+    
+    self.navigationItem.rightBarButtonItems = @[rightBarButton1,rightBarButton2];
     
 }
 
-- (void)setUpRightBarButtons{
+/**
+ *  添加tableView
+ */
+- (void)setUpTableView{
     
-    UIImage *image = [UIImage imageNamed:@"ic_add_article"];
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(image.size.width/2.0, image.size.height/2.0), NO, 0);
-    [image drawInRect:CGRectMake(0, 0, image.size.width/2.0, image.size.height/2.0)];
-    image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image style:UIBarButtonItemStyleDone target:self action:nil];
-    self.navigationItem.rightBarButtonItem = rightBarButton1;
+    UITableView *tableView = [[UITableView alloc]initWithFrame:kScreenBounds style:UITableViewStyleGrouped];
+    [self.view addSubview:tableView];
     
 }
 

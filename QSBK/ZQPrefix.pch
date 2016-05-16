@@ -1,0 +1,16 @@
+//
+//  ZQPrefix.pch
+//  QSBK
+//
+//  Created by lx on 16/5/16.
+//  Copyright © 2016年 LiZhiqiang. All rights reserved.
+//
+
+#ifndef ZQPrefix_pch
+#define ZQPrefix_pch
+
+#import "UIViewExt.h"
+#import "UIImage+Extension.h"
+#import "CommonHead.h"
+
+#endif /* ZQPrefix_pch */

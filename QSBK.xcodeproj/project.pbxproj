@@ -11,6 +11,7 @@
 		E93337CB1CE6FE8500472496 /* ZQBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337C71CE6FE8500472496 /* ZQBaseTabBarController.m */; };
 		E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D01CE702DC00472496 /* ZQBaseTabBar.m */; };
 		E93337D51CE70BD100472496 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D41CE70BD100472496 /* UIViewExt.m */; };
+		E943F6F61CE9A6A000A5F3E9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */; };
 		E99835B81CE6AA2200B02E7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835B71CE6AA2200B02E7B /* main.m */; };
 		E99835BB1CE6AA2200B02E7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835BA1CE6AA2200B02E7B /* AppDelegate.m */; };
 		E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99835C21CE6AA2200B02E7B /* Assets.xcassets */; };
@@ -50,6 +51,10 @@
 		E93337D01CE702DC00472496 /* ZQBaseTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQBaseTabBar.m; sourceTree = "<group>"; };
 		E93337D31CE70BD100472496 /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		E93337D41CE70BD100472496 /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		E943F6F21CE9A40500A5F3E9 /* ZQPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQPrefix.pch; sourceTree = "<group>"; };
+		E943F6F31CE9A4C900A5F3E9 /* CommonHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHead.h; sourceTree = "<group>"; };
+		E943F6F41CE9A6A000A5F3E9 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		E99835B31CE6AA2200B02E7B /* QSBK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSBK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99835B71CE6AA2200B02E7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E99835B91CE6AA2200B02E7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -140,6 +145,8 @@
 		E93337D21CE70BD100472496 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				E943F6F41CE9A6A000A5F3E9 /* UIImage+Extension.h */,
+				E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */,
 				E93337D31CE70BD100472496 /* UIViewExt.h */,
 				E93337D41CE70BD100472496 /* UIViewExt.m */,
 			);
@@ -186,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				E99835B71CE6AA2200B02E7B /* main.m */,
+				E943F6F21CE9A40500A5F3E9 /* ZQPrefix.pch */,
+				E943F6F31CE9A4C900A5F3E9 /* CommonHead.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -518,6 +527,7 @@
 				E99836101CE6AA8700B02E7B /* ZQMeViewController.m in Sources */,
 				E93337CA1CE6FE8500472496 /* ZQBaseNavigationController.m in Sources */,
 				E93337D51CE70BD100472496 /* UIViewExt.m in Sources */,
+				E943F6F61CE9A6A000A5F3E9 /* UIImage+Extension.m in Sources */,
 				E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */,
 				E99836121CE6AA8700B02E7B /* ZQQiushiViewController.m in Sources */,
 				E99836111CE6AA8700B02E7B /* ZQMessageViewController.m in Sources */,
@@ -656,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QSBK/ZQPrefix.pch";
 				INFOPLIST_FILE = QSBK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LiZhiqiang.QSBK;
@@ -667,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/QSBK/ZQPrefix.pch";
 				INFOPLIST_FILE = QSBK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LiZhiqiang.QSBK;
