@@ -74,7 +74,9 @@
     
     self.selectIndex = sender.tag - 1000;
     
-    [self setSelectedState:sender];
+    self.selectIndexChange(self.selectIndex);
+    
+//    [self setSelectedState:sender];
     
 }
 

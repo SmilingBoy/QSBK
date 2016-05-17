@@ -13,6 +13,7 @@
 		E93337D51CE70BD100472496 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D41CE70BD100472496 /* UIViewExt.m */; };
 		E943F6F61CE9A6A000A5F3E9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */; };
 		E952AB461CEA9DEC00D77F45 /* ZQQiushiHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */; };
+		E97E61201CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */; };
 		E99835B81CE6AA2200B02E7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835B71CE6AA2200B02E7B /* main.m */; };
 		E99835BB1CE6AA2200B02E7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835BA1CE6AA2200B02E7B /* AppDelegate.m */; };
 		E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99835C21CE6AA2200B02E7B /* Assets.xcassets */; };
@@ -58,6 +59,8 @@
 		E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
 		E952AB441CEA9DEC00D77F45 /* ZQQiushiHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiushiHeadView.h; sourceTree = "<group>"; };
 		E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiHeadView.m; sourceTree = "<group>"; };
+		E97E611E1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiushiCollectionCell.h; sourceTree = "<group>"; };
+		E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiCollectionCell.m; sourceTree = "<group>"; };
 		E99835B31CE6AA2200B02E7B /* QSBK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSBK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99835B71CE6AA2200B02E7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E99835B91CE6AA2200B02E7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -362,6 +365,8 @@
 			children = (
 				E952AB441CEA9DEC00D77F45 /* ZQQiushiHeadView.h */,
 				E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */,
+				E97E611E1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.h */,
+				E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -542,6 +547,7 @@
 				E998360F1CE6AA8700B02E7B /* ZQDIscoverViewController.m in Sources */,
 				E99835BB1CE6AA2200B02E7B /* AppDelegate.m in Sources */,
 				E99835B81CE6AA2200B02E7B /* main.m in Sources */,
+				E97E61201CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

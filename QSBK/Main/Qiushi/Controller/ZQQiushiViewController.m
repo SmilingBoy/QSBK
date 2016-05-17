@@ -8,6 +8,7 @@
 
 #import "ZQQiushiViewController.h"
 #import "ZQQiushiHeadView.h"
+#import "ZQQiushiCollectionCell.h"
 
 @interface ZQQiushiViewController () <UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
@@ -38,8 +39,15 @@
     _headView = headView;
     [self.view addSubview:_headView];
     
-    //添加观察者
-    [_headView addObserver:self forKeyPath:@"selectIndex" options:NSKeyValueObservingOptionNew context:nil];
+    
+    [_headView setSelectIndexChange:^(NSInteger selectIndex) {
+       
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:selectIndex inSection:0];
+        
+        //滑动到指定位置
+        [self.collection scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+        
+    }];
 
 }
 
@@ -70,28 +78,10 @@
     collection.bounces = NO;
     collection.showsHorizontalScrollIndicator = NO;
     
-    [collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    //注册cell
+    [collection registerClass:[ZQQiushiCollectionCell class] forCellWithReuseIdentifier:@"cell"];
     
 }
-
-/**
- *  观察监听
- */
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
-    
-    if ([keyPath isEqualToString:@"selectIndex"]) {
-        
-        NSInteger index = [[change objectForKey:@"new"] integerValue];
-        
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-        
-        //滑动到指定位置
-        [self.collection scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
-        
-    }
-    
-}
-
 #pragma mark -UICollectionViewDataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 5;
@@ -99,9 +89,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    ZQQiushiCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
     return cell;
     
 }

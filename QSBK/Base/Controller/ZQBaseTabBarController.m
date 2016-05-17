@@ -129,12 +129,6 @@
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc]initWithCustomView:leftButtonView];
     
-    //设置子视图
-    vc.tabBarItem.title = title;
-    vc.tabBarItem.image = [norImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc.tabBarItem.selectedImage = [selImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc.navigationItem.leftBarButtonItem = leftButton;
-    
     //设置NavigationController
     ZQBaseNavigationController *nvc = [[ZQBaseNavigationController alloc]initWithRootViewController:vc];
     [self addChildViewController:nvc];
@@ -144,14 +138,30 @@
     //设置导航栏右侧按钮
     UIImage *image1 = [UIImage imageNamed:@"ic_add_article"];
     image1 = [[image1 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_1:)];
     
     UIImage *image2 = [UIImage imageNamed:@"ic_audit"];
     image2 = [[image2 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:nil];
+    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_2:)];
     
     vc.navigationItem.rightBarButtonItems = @[rightBarButton1,rightBarButton2];
     
+    
+    //设置子视图
+    vc.tabBarItem.title = title;
+    vc.tabBarItem.image = [norImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.selectedImage = [selImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.navigationItem.leftBarButtonItem = leftButton;
+}
+
+- (void)rightBarButttonClick_1:(UIButton *)sender{
+    
+    NSLog(@"---1");
+    
+}
+- (void)rightBarButttonClick_2:(UIButton *)sender{
+    
+    NSLog(@"---2");
 }
 
 

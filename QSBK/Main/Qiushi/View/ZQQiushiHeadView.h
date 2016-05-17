@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^BlockType)(NSInteger);
+
 @interface ZQQiushiHeadView : UIView
 
 @property (nonatomic, assign)NSInteger selectIndex;
+@property (nonatomic, copy)BlockType selectIndexChange;
+
+- (void)setSelectIndexChange:(BlockType)selectIndexChange;
 
 @end
