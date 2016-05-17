@@ -12,6 +12,7 @@
 		E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D01CE702DC00472496 /* ZQBaseTabBar.m */; };
 		E93337D51CE70BD100472496 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D41CE70BD100472496 /* UIViewExt.m */; };
 		E943F6F61CE9A6A000A5F3E9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */; };
+		E952AB461CEA9DEC00D77F45 /* ZQQiushiHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */; };
 		E99835B81CE6AA2200B02E7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835B71CE6AA2200B02E7B /* main.m */; };
 		E99835BB1CE6AA2200B02E7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835BA1CE6AA2200B02E7B /* AppDelegate.m */; };
 		E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E99835C21CE6AA2200B02E7B /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		E943F6F31CE9A4C900A5F3E9 /* CommonHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHead.h; sourceTree = "<group>"; };
 		E943F6F41CE9A6A000A5F3E9 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		E952AB441CEA9DEC00D77F45 /* ZQQiushiHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiushiHeadView.h; sourceTree = "<group>"; };
+		E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiHeadView.m; sourceTree = "<group>"; };
 		E99835B31CE6AA2200B02E7B /* QSBK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSBK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99835B71CE6AA2200B02E7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E99835B91CE6AA2200B02E7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -357,6 +360,8 @@
 		E99836061CE6AA8700B02E7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E952AB441CEA9DEC00D77F45 /* ZQQiushiHeadView.h */,
+				E952AB451CEA9DEC00D77F45 /* ZQQiushiHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 				E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */,
 				E99836121CE6AA8700B02E7B /* ZQQiushiViewController.m in Sources */,
 				E99836111CE6AA8700B02E7B /* ZQMessageViewController.m in Sources */,
+				E952AB461CEA9DEC00D77F45 /* ZQQiushiHeadView.m in Sources */,
 				E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */,
 				E93337CB1CE6FE8500472496 /* ZQBaseTabBarController.m in Sources */,
 				E998360F1CE6AA8700B02E7B /* ZQDIscoverViewController.m in Sources */,

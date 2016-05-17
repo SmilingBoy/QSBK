@@ -141,6 +141,18 @@
     
     [self.items addObject:vc.tabBarItem];
     
+    //设置导航栏右侧按钮
+    UIImage *image1 = [UIImage imageNamed:@"ic_add_article"];
+    image1 = [[image1 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:nil];
+    
+    UIImage *image2 = [UIImage imageNamed:@"ic_audit"];
+    image2 = [[image2 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:nil];
+    
+    vc.navigationItem.rightBarButtonItems = @[rightBarButton1,rightBarButton2];
+    
 }
+
 
 @end
