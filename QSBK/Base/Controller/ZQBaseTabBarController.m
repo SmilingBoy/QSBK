@@ -15,6 +15,7 @@
 #import "ZQMeViewController.h"
 #import "ZQBaseNavigationController.h"
 #import "ZQBaseTabBar.h"
+#import "ZQWriteViewController.h"
 
 @interface ZQBaseTabBarController ()
 
@@ -156,7 +157,9 @@
 
 - (void)rightBarButttonClick_1:(UIButton *)sender{
     
-    NSLog(@"---1");
+    ZQWriteViewController *writeViewControllr = [[ZQWriteViewController alloc]init];
+    
+    [self presentViewController:writeViewControllr animated:YES completion:nil];
     
 }
 - (void)rightBarButttonClick_2:(UIButton *)sender{

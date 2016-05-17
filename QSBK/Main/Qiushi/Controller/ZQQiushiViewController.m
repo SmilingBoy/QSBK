@@ -77,6 +77,8 @@
     collection.pagingEnabled = YES;
     collection.bounces = NO;
     collection.showsHorizontalScrollIndicator = NO;
+    collection.userInteractionEnabled = YES;
+    collection.multipleTouchEnabled = YES;
     
     //注册cell
     [collection registerClass:[ZQQiushiCollectionCell class] forCellWithReuseIdentifier:@"cell"];
@@ -103,5 +105,6 @@
     [_headView setSelectIndex:index];
     
 }
+
 
 @end

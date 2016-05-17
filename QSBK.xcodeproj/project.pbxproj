@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E92C8DDB1CEAEC5E00D3F796 /* ZQWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C8DD91CEAEC5E00D3F796 /* ZQWriteViewController.m */; };
+		E92C8DDC1CEAEC5E00D3F796 /* ZQWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92C8DDA1CEAEC5E00D3F796 /* ZQWriteViewController.xib */; };
 		E93337CA1CE6FE8500472496 /* ZQBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337C51CE6FE8500472496 /* ZQBaseNavigationController.m */; };
 		E93337CB1CE6FE8500472496 /* ZQBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337C71CE6FE8500472496 /* ZQBaseTabBarController.m */; };
 		E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D01CE702DC00472496 /* ZQBaseTabBar.m */; };
@@ -45,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E92C8DD81CEAEC5E00D3F796 /* ZQWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQWriteViewController.h; sourceTree = "<group>"; };
+		E92C8DD91CEAEC5E00D3F796 /* ZQWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQWriteViewController.m; sourceTree = "<group>"; };
+		E92C8DDA1CEAEC5E00D3F796 /* ZQWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQWriteViewController.xib; sourceTree = "<group>"; };
 		E93337C41CE6FE8500472496 /* ZQBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQBaseNavigationController.h; sourceTree = "<group>"; };
 		E93337C51CE6FE8500472496 /* ZQBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQBaseNavigationController.m; sourceTree = "<group>"; };
 		E93337C61CE6FE8500472496 /* ZQBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQBaseTabBarController.h; sourceTree = "<group>"; };
@@ -128,6 +133,9 @@
 				E93337C51CE6FE8500472496 /* ZQBaseNavigationController.m */,
 				E93337C61CE6FE8500472496 /* ZQBaseTabBarController.h */,
 				E93337C71CE6FE8500472496 /* ZQBaseTabBarController.m */,
+				E92C8DD81CEAEC5E00D3F796 /* ZQWriteViewController.h */,
+				E92C8DD91CEAEC5E00D3F796 /* ZQWriteViewController.m */,
+				E92C8DDA1CEAEC5E00D3F796 /* ZQWriteViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -509,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99835C61CE6AA2200B02E7B /* LaunchScreen.storyboard in Resources */,
+				E92C8DDC1CEAEC5E00D3F796 /* ZQWriteViewController.xib in Resources */,
 				E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +550,7 @@
 				E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */,
 				E99836121CE6AA8700B02E7B /* ZQQiushiViewController.m in Sources */,
 				E99836111CE6AA8700B02E7B /* ZQMessageViewController.m in Sources */,
+				E92C8DDB1CEAEC5E00D3F796 /* ZQWriteViewController.m in Sources */,
 				E952AB461CEA9DEC00D77F45 /* ZQQiushiHeadView.m in Sources */,
 				E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */,
 				E93337CB1CE6FE8500472496 /* ZQBaseTabBarController.m in Sources */,

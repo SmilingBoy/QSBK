@@ -23,8 +23,10 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        [self setUpTableView];
+//        [self setUpTableView];
   
+        self.userInteractionEnabled = YES;
+        self.multipleTouchEnabled = YES;
     }
     return self;
 }
@@ -37,7 +39,7 @@
     [self.contentView addSubview:_tableView];
     
     tableView.backgroundColor = [UIColor whiteColor];
-    
+//    self setValuesForKeysWithDictionary:<#(nonnull NSDictionary<NSString *,id> *)#>
 }
 
 
