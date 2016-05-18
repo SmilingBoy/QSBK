@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^SliderBlock)(BOOL);
+
 @interface ZQQiushiCollectionCell : UICollectionViewCell
+
+//tabbleView滑动偏移量
+@property (nonatomic, copy)SliderBlock sliderOffset;
+
+- (void)setSliderOffset:(SliderBlock)sliderOffset;
 
 @end

@@ -15,6 +15,8 @@
 @property (nonatomic, weak)ZQQiushiHeadView *headView;
 @property (nonatomic, weak)UICollectionView *collection;
 
+//保存初始化状态headView的y值
+//@property (nonatomic, assign)CGFloat headViewY;
 
 @end
 
@@ -26,6 +28,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self setUpHeadView];
+    
     [self setUpCollectionView];
     
 }
@@ -38,7 +41,6 @@
     ZQQiushiHeadView *headView = [[ZQQiushiHeadView alloc]initWithFrame:CGRectMake(0, self.navigationController.navigationBar.bottom, kScreenWidth, 50)];
     _headView = headView;
     [self.view addSubview:_headView];
-    
     
     [_headView setSelectIndexChange:^(NSInteger selectIndex) {
        
@@ -63,12 +65,13 @@
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight - _headView.bottom - tabBarHeight);
+    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight - self.headView.bottom - tabBarHeight );
     
-    UICollectionView *collection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, _headView.bottom, kScreenWidth, kScreenHeight - _headView.bottom - tabBarHeight) collectionViewLayout:layout];
+    UICollectionView *collection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, _headView.bottom, kScreenWidth, kScreenHeight - self.headView.bottom - tabBarHeight) collectionViewLayout:layout];
     
     _collection = collection;
     [self.view addSubview:_collection];
+//    [self.view insertSubview:_collection belowSubview:_headView];
     
     collection.delegate = self;
     collection.dataSource = self;
@@ -77,8 +80,8 @@
     collection.pagingEnabled = YES;
     collection.bounces = NO;
     collection.showsHorizontalScrollIndicator = NO;
-    collection.userInteractionEnabled = YES;
-    collection.multipleTouchEnabled = YES;
+  
+    collection.backgroundColor = [UIColor clearColor];
     
     //注册cell
     [collection registerClass:[ZQQiushiCollectionCell class] forCellWithReuseIdentifier:@"cell"];
@@ -92,6 +95,24 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     ZQQiushiCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    
+    [cell setSliderOffset:^(BOOL isUp) {
+        
+        [UIView animateWithDuration:0.1 animations:^{
+            
+            if (isUp) {
+                
+                self.headView.top = 20;
+                
+            }
+            if (!isUp) {
+                self.headView.top = 64;
+            }
+            
+        }];
+        
+        
+    }];
     
     return cell;
     
