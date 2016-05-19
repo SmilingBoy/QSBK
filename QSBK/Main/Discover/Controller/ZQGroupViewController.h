@@ -1,5 +1,5 @@
 //
-//  ZQDiscoverViewController.h
+//  ZQGroupViewController.h
 //  QSBK
 //
 //  Created by lx on 16/5/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZQDiscoverViewController : UIViewController
+@interface ZQGroupViewController : UIViewController
 
 @end

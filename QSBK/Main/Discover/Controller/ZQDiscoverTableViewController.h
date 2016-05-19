@@ -1,5 +1,5 @@
 //
-//  ZQDiscoverViewController.h
+//  ZQDiscoverTableViewController.h
 //  QSBK
 //
 //  Created by lx on 16/5/19.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZQDiscoverViewController : UIViewController
+@interface ZQDiscoverTableViewController : UITableViewController
 
 @end

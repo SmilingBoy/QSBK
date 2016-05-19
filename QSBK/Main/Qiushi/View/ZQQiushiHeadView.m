@@ -35,7 +35,7 @@
         NSArray *titleArray = @[@"专享",@"视频",@"纯文",@"纯图",@"精华"];
         
         //添加按钮
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < titleArray.count; i++) {
             
             UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(i * kButtonWidth, 0, kButtonWidth,kViewHeight * 0.9)];
             [self addSubview:button];
@@ -75,8 +75,6 @@
     self.selectIndex = sender.tag - 1000;
     
     self.selectIndexChange(self.selectIndex);
-    
-//    [self setSelectedState:sender];
     
 }
 

@@ -7,16 +7,19 @@
 //
 
 #import "ZQQiushiViewController.h"
-#import "ZQQiushiHeadView.h"
+#import "ZQSegmentView.h"
 #import "ZQQiushiCollectionCell.h"
+#import "ZQWriteViewController.h"
+
+#define kTabBarHeight self.tabBarController.tabBar.height
+#define kNavBarBottom self.navigationController.navigationBar.bottom
 
 @interface ZQQiushiViewController () <UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 
-@property (nonatomic, weak)ZQQiushiHeadView *headView;
+@property (nonatomic, weak)ZQSegmentView *headView;
 @property (nonatomic, weak)UICollectionView *collection;
 
-//保存初始化状态headView的y值
-//@property (nonatomic, assign)CGFloat headViewY;
+
 
 @end
 
@@ -27,6 +30,8 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self setUpNavBarButton];
+    
     [self setUpHeadView];
     
     [self setUpCollectionView];
@@ -34,11 +39,45 @@
 }
 
 /**
+ *  设置导航栏右侧按钮
+ */
+- (void)setUpNavBarButton{
+    
+    UIImage *image1 = [UIImage imageNamed:@"ic_add_article"];
+    image1 = [[image1 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_1:)];
+    
+    UIImage *image2 = [UIImage imageNamed:@"ic_audit"];
+    image2 = [[image2 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_2:)];
+    
+    self.navigationItem.rightBarButtonItems = @[rightBarButton1,rightBarButton2];
+    
+    
+}
+
+- (void)rightBarButttonClick_1:(UIButton *)sender{
+    
+    ZQWriteViewController *writeViewControllr = [[ZQWriteViewController alloc]init];
+    
+    [self presentViewController:writeViewControllr animated:YES completion:nil];
+    
+}
+
+- (void)rightBarButttonClick_2:(UIButton *)sender{
+    
+    NSLog(@"---2");
+}
+
+
+/**
  *  添加头视图,实现标签栏的效果
  */
 - (void)setUpHeadView{
     
-    ZQQiushiHeadView *headView = [[ZQQiushiHeadView alloc]initWithFrame:CGRectMake(0, self.navigationController.navigationBar.bottom, kScreenWidth, 50)];
+    ZQSegmentView *headView = [[ZQSegmentView alloc]initWithFrame:CGRectMake(0, kNavBarBottom, kScreenWidth, 50)];
+     NSArray *titleArray = @[@"专享",@"视频",@"纯文",@"纯图",@"精华"];
+    [headView setTitleArray:titleArray];
     _headView = headView;
     [self.view addSubview:_headView];
     
@@ -58,23 +97,22 @@
  */
 - (void)setUpCollectionView{
     
-    CGFloat tabBarHeight = self.tabBarController.tabBar.height;
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-    
+
     layout.minimumLineSpacing = 0;
     layout.minimumInteritemSpacing = 0;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight - self.headView.bottom - tabBarHeight );
+    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight - kNavBarBottom - kTabBarHeight );
     
-    UICollectionView *collection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, _headView.bottom, kScreenWidth, kScreenHeight - self.headView.bottom - tabBarHeight) collectionViewLayout:layout];
+    UICollectionView *collection = [[UICollectionView alloc]initWithFrame:CGRectMake(0, kNavBarBottom, kScreenWidth, kScreenHeight - kNavBarBottom - kTabBarHeight) collectionViewLayout:layout];
     
     _collection = collection;
-    [self.view addSubview:_collection];
-//    [self.view insertSubview:_collection belowSubview:_headView];
+    [self.view insertSubview:_collection belowSubview:_headView];
     
     collection.delegate = self;
     collection.dataSource = self;
+    
     
     //开启分页,关闭反弹效果,隐藏滚动条
     collection.pagingEnabled = YES;
@@ -111,7 +149,6 @@
             
         }];
         
-        
     }];
     
     return cell;
@@ -124,6 +161,12 @@
     NSInteger index = offsetX /kScreenWidth;
     
     [_headView setSelectIndex:index];
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        
+        self.headView.top = 64;
+    
+    }];
     
 }
 

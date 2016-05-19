@@ -1,22 +1,23 @@
 //
-//  ZQQiushiCollectionCell.m
+//  ZQQiuyouCollectionViewCell.m
 //  QSBK
 //
-//  Created by lx on 16/5/17.
+//  Created by lx on 16/5/19.
 //  Copyright © 2016年 LiZhiqiang. All rights reserved.
 //
 
-#import "ZQQiushiCollectionCell.h"
+#import "ZQQiuyouCollectionViewCell.h"
 
-@interface ZQQiushiCollectionCell () <UITableViewDataSource,UITableViewDelegate>
+@interface ZQQiuyouCollectionViewCell ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, weak)UITableView *tableView;
 
 @property (nonatomic, assign)CGFloat oldOffset;
 
+
 @end
 
-@implementation ZQQiushiCollectionCell
+@implementation ZQQiuyouCollectionViewCell
 
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -25,7 +26,7 @@
     if (self) {
         
         [self setUpTableView];
-  
+        
     }
     return self;
 }
@@ -81,6 +82,7 @@
     
     
 }
+
 
 
 @end

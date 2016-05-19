@@ -10,12 +10,11 @@
 
 #import "ZQQiushiViewController.h"
 #import "ZQQiuyouCircleViewController.h"
-#import "ZQDIscoverViewController.h"
+#import "ZQDiscoverViewController.h"
 #import "ZQMessageViewController.h"
 #import "ZQMeViewController.h"
 #import "ZQBaseNavigationController.h"
 #import "ZQBaseTabBar.h"
-#import "ZQWriteViewController.h"
 
 @interface ZQBaseTabBarController ()
 
@@ -88,7 +87,7 @@
                     withSelImg:[UIImage imageNamed:@"ic_qiuyoucircle_select"]
                      withTitle:@"糗友圈"];
     
-    ZQDIscoverViewController *discover = [[ZQDIscoverViewController alloc]init];
+    ZQDiscoverViewController *discover = [[ZQDiscoverViewController alloc]init];
     [self addOneViewController:discover
                   withNorImage:[UIImage imageNamed:@"ic_nearby_normal"]
                     withSelImg:[UIImage imageNamed:@"ic_nearby_select"]
@@ -136,18 +135,6 @@
     
     [self.items addObject:vc.tabBarItem];
     
-    //设置导航栏右侧按钮
-    UIImage *image1 = [UIImage imageNamed:@"ic_add_article"];
-    image1 = [[image1 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightBarButton1 = [[UIBarButtonItem alloc]initWithImage:image1 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_1:)];
-    
-    UIImage *image2 = [UIImage imageNamed:@"ic_audit"];
-    image2 = [[image2 scaleImageWithSize:CGSizeMake(30, 30)] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightBarButton2 = [[UIBarButtonItem alloc]initWithImage:image2 style:UIBarButtonItemStyleDone target:self action:@selector(rightBarButttonClick_2:)];
-    
-    vc.navigationItem.rightBarButtonItems = @[rightBarButton1,rightBarButton2];
-    
-    
     //设置子视图
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [norImg imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -155,17 +142,6 @@
     vc.navigationItem.leftBarButtonItem = leftButton;
 }
 
-- (void)rightBarButttonClick_1:(UIButton *)sender{
-    
-    ZQWriteViewController *writeViewControllr = [[ZQWriteViewController alloc]init];
-    
-    [self presentViewController:writeViewControllr animated:YES completion:nil];
-    
-}
-- (void)rightBarButttonClick_2:(UIButton *)sender{
-    
-    NSLog(@"---2");
-}
 
 
 @end
