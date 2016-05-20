@@ -28,6 +28,8 @@
 		E99836111CE6AA8700B02E7B /* ZQMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99835FE1CE6AA8700B02E7B /* ZQMessageViewController.m */; };
 		E99836121CE6AA8700B02E7B /* ZQQiushiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E99836041CE6AA8700B02E7B /* ZQQiushiViewController.m */; };
 		E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E998360A1CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m */; };
+		E9B4CB4D1CEF39420036F07B /* ZQGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */; };
+		E9B4CB4E1CEF39420036F07B /* ZQGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */; };
 		E9FC3C371CEC0A170090840B /* ZQSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC3C361CEC0A170090840B /* ZQSegmentView.m */; };
 		E9FC3C511CEC5F430090840B /* ZQWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC3C4F1CEC5F430090840B /* ZQWriteViewController.m */; };
 		E9FC3C521CEC5F430090840B /* ZQWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FC3C501CEC5F430090840B /* ZQWriteViewController.xib */; };
@@ -95,6 +97,9 @@
 		E99836041CE6AA8700B02E7B /* ZQQiushiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiViewController.m; sourceTree = "<group>"; };
 		E99836091CE6AA8700B02E7B /* ZQQiuyouCircleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiuyouCircleViewController.h; sourceTree = "<group>"; };
 		E998360A1CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiuyouCircleViewController.m; sourceTree = "<group>"; };
+		E9B4CB4A1CEF39420036F07B /* ZQGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQGroupCell.h; sourceTree = "<group>"; };
+		E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQGroupCell.m; sourceTree = "<group>"; };
+		E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQGroupCell.xib; sourceTree = "<group>"; };
 		E9FC3C351CEC0A170090840B /* ZQSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQSegmentView.h; sourceTree = "<group>"; };
 		E9FC3C361CEC0A170090840B /* ZQSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQSegmentView.m; sourceTree = "<group>"; };
 		E9FC3C4E1CEC5F430090840B /* ZQWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQWriteViewController.h; sourceTree = "<group>"; };
@@ -286,6 +291,9 @@
 		E99835F41CE6AA8700B02E7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9B4CB4A1CEF39420036F07B /* ZQGroupCell.h */,
+				E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */,
+				E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -545,6 +553,7 @@
 				E99835C61CE6AA2200B02E7B /* LaunchScreen.storyboard in Resources */,
 				E9FC3C521CEC5F430090840B /* ZQWriteViewController.xib in Resources */,
 				E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */,
+				E9B4CB4E1CEF39420036F07B /* ZQGroupCell.xib in Resources */,
 				E995A7EB1CED6687008B059B /* ZQDiscoverViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,6 +587,7 @@
 				E995A7DF1CED5EB3008B059B /* ZQQiuyouCollectionViewCell.m in Sources */,
 				E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */,
 				E91990061CEDB146000E6BDA /* ZQDiscoverTableViewController.m in Sources */,
+				E9B4CB4D1CEF39420036F07B /* ZQGroupCell.m in Sources */,
 				E99836121CE6AA8700B02E7B /* ZQQiushiViewController.m in Sources */,
 				E9FC3C511CEC5F430090840B /* ZQWriteViewController.m in Sources */,
 				E99836111CE6AA8700B02E7B /* ZQMessageViewController.m in Sources */,
