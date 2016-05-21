@@ -7,6 +7,7 @@
 //
 
 #import "ZQQiushiCollectionCell.h"
+#import "ZQQiushiTableViewCell.h"
 
 @interface ZQQiushiCollectionCell () <UITableViewDataSource,UITableViewDelegate>
 
@@ -58,8 +59,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithFrame:CGRectMake(0, 0, 100, 30)];
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+    static NSString *reuserIdentifier = @"cell";
+    
+    ZQQiushiTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuserIdentifier];
+    
+    if (!cell) {
+        
+        cell = [[ZQQiushiTableViewCell alloc] init];
+        
+    }
     
     return cell;
     
@@ -82,5 +90,10 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return 300;
+    
+}
 
 @end

@@ -14,6 +14,7 @@
 		E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D01CE702DC00472496 /* ZQBaseTabBar.m */; };
 		E93337D51CE70BD100472496 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E93337D41CE70BD100472496 /* UIViewExt.m */; };
 		E943F6F61CE9A6A000A5F3E9 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */; };
+		E97D836B1CF07F8C00170A17 /* ZQMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E97D836A1CF07F8C00170A17 /* ZQMeViewController.storyboard */; };
 		E97E61201CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */; };
 		E995A7DF1CED5EB3008B059B /* ZQQiuyouCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E995A7DE1CED5EB3008B059B /* ZQQiuyouCollectionViewCell.m */; };
 		E995A7E81CED62CC008B059B /* ZQDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E995A7E61CED62CC008B059B /* ZQDiscoverViewController.m */; };
@@ -30,6 +31,11 @@
 		E99836131CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E998360A1CE6AA8700B02E7B /* ZQQiuyouCircleViewController.m */; };
 		E9B4CB4D1CEF39420036F07B /* ZQGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */; };
 		E9B4CB4E1CEF39420036F07B /* ZQGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */; };
+		E9F52A231CF0568A006BBC47 /* ZQNearFirendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F52A221CF0568A006BBC47 /* ZQNearFirendViewController.m */; };
+		E9F52A271CF058D6006BBC47 /* ZQNearFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F52A251CF058D6006BBC47 /* ZQNearFriendCell.m */; };
+		E9F52A281CF058D6006BBC47 /* ZQNearFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F52A261CF058D6006BBC47 /* ZQNearFriendCell.xib */; };
+		E9F52A2C1CF05D1F006BBC47 /* ZQQiushiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F52A2A1CF05D1F006BBC47 /* ZQQiushiTableViewCell.m */; };
+		E9F52A2D1CF05D1F006BBC47 /* ZQQiushiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9F52A2B1CF05D1F006BBC47 /* ZQQiushiTableViewCell.xib */; };
 		E9FC3C371CEC0A170090840B /* ZQSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC3C361CEC0A170090840B /* ZQSegmentView.m */; };
 		E9FC3C511CEC5F430090840B /* ZQWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FC3C4F1CEC5F430090840B /* ZQWriteViewController.m */; };
 		E9FC3C521CEC5F430090840B /* ZQWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FC3C501CEC5F430090840B /* ZQWriteViewController.xib */; };
@@ -69,6 +75,7 @@
 		E943F6F31CE9A4C900A5F3E9 /* CommonHead.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonHead.h; sourceTree = "<group>"; };
 		E943F6F41CE9A6A000A5F3E9 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		E943F6F51CE9A6A000A5F3E9 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		E97D836A1CF07F8C00170A17 /* ZQMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ZQMeViewController.storyboard; sourceTree = "<group>"; };
 		E97E611E1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiushiCollectionCell.h; sourceTree = "<group>"; };
 		E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiCollectionCell.m; sourceTree = "<group>"; };
 		E995A7DD1CED5EB3008B059B /* ZQQiuyouCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiuyouCollectionViewCell.h; sourceTree = "<group>"; };
@@ -100,6 +107,14 @@
 		E9B4CB4A1CEF39420036F07B /* ZQGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQGroupCell.h; sourceTree = "<group>"; };
 		E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQGroupCell.m; sourceTree = "<group>"; };
 		E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQGroupCell.xib; sourceTree = "<group>"; };
+		E9F52A211CF0568A006BBC47 /* ZQNearFirendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQNearFirendViewController.h; sourceTree = "<group>"; };
+		E9F52A221CF0568A006BBC47 /* ZQNearFirendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQNearFirendViewController.m; sourceTree = "<group>"; };
+		E9F52A241CF058D6006BBC47 /* ZQNearFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQNearFriendCell.h; sourceTree = "<group>"; };
+		E9F52A251CF058D6006BBC47 /* ZQNearFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQNearFriendCell.m; sourceTree = "<group>"; };
+		E9F52A261CF058D6006BBC47 /* ZQNearFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQNearFriendCell.xib; sourceTree = "<group>"; };
+		E9F52A291CF05D1F006BBC47 /* ZQQiushiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQQiushiTableViewCell.h; sourceTree = "<group>"; };
+		E9F52A2A1CF05D1F006BBC47 /* ZQQiushiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQQiushiTableViewCell.m; sourceTree = "<group>"; };
+		E9F52A2B1CF05D1F006BBC47 /* ZQQiushiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZQQiushiTableViewCell.xib; sourceTree = "<group>"; };
 		E9FC3C351CEC0A170090840B /* ZQSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQSegmentView.h; sourceTree = "<group>"; };
 		E9FC3C361CEC0A170090840B /* ZQSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZQSegmentView.m; sourceTree = "<group>"; };
 		E9FC3C4E1CEC5F430090840B /* ZQWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZQWriteViewController.h; sourceTree = "<group>"; };
@@ -273,10 +288,12 @@
 				E995A7E51CED62CC008B059B /* ZQDiscoverViewController.h */,
 				E995A7E61CED62CC008B059B /* ZQDiscoverViewController.m */,
 				E995A7EA1CED6687008B059B /* ZQDiscoverViewController.storyboard */,
-				E91990011CEDAADA000E6BDA /* ZQGroupViewController.h */,
-				E91990021CEDAADA000E6BDA /* ZQGroupViewController.m */,
 				E91990041CEDB146000E6BDA /* ZQDiscoverTableViewController.h */,
 				E91990051CEDB146000E6BDA /* ZQDiscoverTableViewController.m */,
+				E9F52A211CF0568A006BBC47 /* ZQNearFirendViewController.h */,
+				E9F52A221CF0568A006BBC47 /* ZQNearFirendViewController.m */,
+				E91990011CEDAADA000E6BDA /* ZQGroupViewController.h */,
+				E91990021CEDAADA000E6BDA /* ZQGroupViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +308,9 @@
 		E99835F41CE6AA8700B02E7B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F52A241CF058D6006BBC47 /* ZQNearFriendCell.h */,
+				E9F52A251CF058D6006BBC47 /* ZQNearFriendCell.m */,
+				E9F52A261CF058D6006BBC47 /* ZQNearFriendCell.xib */,
 				E9B4CB4A1CEF39420036F07B /* ZQGroupCell.h */,
 				E9B4CB4B1CEF39420036F07B /* ZQGroupCell.m */,
 				E9B4CB4C1CEF39420036F07B /* ZQGroupCell.xib */,
@@ -313,6 +333,7 @@
 			children = (
 				E99835F71CE6AA8700B02E7B /* ZQMeViewController.h */,
 				E99835F81CE6AA8700B02E7B /* ZQMeViewController.m */,
+				E97D836A1CF07F8C00170A17 /* ZQMeViewController.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -398,6 +419,9 @@
 			children = (
 				E97E611E1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.h */,
 				E97E611F1CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m */,
+				E9F52A291CF05D1F006BBC47 /* ZQQiushiTableViewCell.h */,
+				E9F52A2A1CF05D1F006BBC47 /* ZQQiushiTableViewCell.m */,
+				E9F52A2B1CF05D1F006BBC47 /* ZQQiushiTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,9 +574,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E97D836B1CF07F8C00170A17 /* ZQMeViewController.storyboard in Resources */,
 				E99835C61CE6AA2200B02E7B /* LaunchScreen.storyboard in Resources */,
 				E9FC3C521CEC5F430090840B /* ZQWriteViewController.xib in Resources */,
+				E9F52A281CF058D6006BBC47 /* ZQNearFriendCell.xib in Resources */,
 				E99835C31CE6AA2200B02E7B /* Assets.xcassets in Resources */,
+				E9F52A2D1CF05D1F006BBC47 /* ZQQiushiTableViewCell.xib in Resources */,
 				E9B4CB4E1CEF39420036F07B /* ZQGroupCell.xib in Resources */,
 				E995A7EB1CED6687008B059B /* ZQDiscoverViewController.storyboard in Resources */,
 			);
@@ -594,8 +621,11 @@
 				E93337D11CE702DC00472496 /* ZQBaseTabBar.m in Sources */,
 				E93337CB1CE6FE8500472496 /* ZQBaseTabBarController.m in Sources */,
 				E99835BB1CE6AA2200B02E7B /* AppDelegate.m in Sources */,
+				E9F52A2C1CF05D1F006BBC47 /* ZQQiushiTableViewCell.m in Sources */,
+				E9F52A231CF0568A006BBC47 /* ZQNearFirendViewController.m in Sources */,
 				E91990031CEDAADA000E6BDA /* ZQGroupViewController.m in Sources */,
 				E99835B81CE6AA2200B02E7B /* main.m in Sources */,
+				E9F52A271CF058D6006BBC47 /* ZQNearFriendCell.m in Sources */,
 				E995A7E81CED62CC008B059B /* ZQDiscoverViewController.m in Sources */,
 				E97E61201CEAC3E3004A4DF2 /* ZQQiushiCollectionCell.m in Sources */,
 			);

@@ -108,10 +108,16 @@
     
     if (index == 0) {
         
+        _tableView1.hidden = NO;
+        
         [UIView animateWithDuration:0.5 animations:^{
             
             _tableView1.transform = CGAffineTransformIdentity;
             _tableView2.transform = CGAffineTransformIdentity;
+            
+        } completion:^(BOOL finished) {
+            
+            _tableView2.hidden = YES;
             
         }];
         
@@ -119,10 +125,14 @@
     
     if (index == 1) {
         
+        _tableView2.hidden = NO;
+        
         [UIView animateWithDuration:0.5 animations:^{
-            
             _tableView1.transform = CGAffineTransformMakeTranslation(-kScreenWidth, 0);
             _tableView2.transform = CGAffineTransformMakeTranslation(-kScreenWidth, 0);
+        } completion:^(BOOL finished) {
+            
+            _tableView1.hidden = YES;
             
         }];
         
